@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img src="images/logo.svg" alt="" />
+      <div class="wrapper">
+        <!---->
+        <div class="calc">
+          <label for="bill" class="calcLabel"
+            >Bill<span class="calcSpan"></span
+          ></label>
+          <div class="inputsCalc">
+            <img src="images/icon-dollar.svg" alt="" /><input
+              type="number"
+              id="bill"
+              placeholder="0"
+            />
+          </div>
+
+          <label for="selectTip">Select Tip %</label>
+          <div id="selectTip">
+            <div class="column">
+              <div class="tipOption">
+                <input type="radio" name="tip" id="" value="5" /><span>5%</span>
+              </div>
+              <div class="tipOption">
+                <input type="radio" name="tip" id="" value="10" /><span
+                  >10%</span
+                >
+              </div>
+              <div class="tipOption">
+                <input type="radio" name="tip" id="" value="15" /><span
+                  >15%</span
+                >
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="tipOption">
+                <input type="radio" name="tip" id="" value="25" /><span
+                  >25%</span
+                >
+              </div>
+              <div class="tipOption">
+                <input type="radio" name="tip" id="" value="50" /><span
+                  >50%</span
+                >
+              </div>
+              <input type="number" name="" id="custom" placeholder="Custom" />
+            </div>
+          </div>
+          <label for="numberPeople" class="calcLabel"
+            >Number of People<span class="calcSpan"></span
+          ></label>
+          <div class="inputsCalc">
+            <img src="images/icon-person.svg" alt="" /><input
+              type="number"
+              id="numberPeople"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <!---->
+
+        <div class="total">
+          <section class="resulatdo">
+            <div class="text">
+              <div>
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+              <p class="price">$0.00</p>
+            </div>
+
+            <div class="text">
+              <div>
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+              <p class="price">$0.00</p>
+            </div>
+          </section>
+
+          <button class="reset" disabled>RESET</button>
+          <script src="main.js"></script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

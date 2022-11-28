@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  top: -4em;
+  width: 50em;
+  height: 25em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.3em;
+}
+
+.calc,
+.total {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+  height: 22em;
+}
+
+.calc {
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.total {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0.5em;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.8em;
+}
+
+.total section {
+  width: 22em;
+  height: 11em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.total section .text {
+  width: 100%;
+  height: 10em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text div p {
+  font-size: 15px;
+  color: hsl(184, 14%, 56%);
+}
+
+.text div h2 {
+  color: hsl(0, 0%, 100%);
+}
+.text .price {
+  font-size: 3em;
+  color: hsl(172, 67%, 45%);
+}
+
+#selectTip {
+  width: 100%;
+  height: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#selectTip .column {
+  width: 22.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 24px;
+}
+
+input[type="number"] {
+  outline: 0;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  color: hsl(183, 100%, 15%);
+}
+
+input[type="number"] {
+  cursor: pointer;
+}
+
+input[type="number"]::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.inputsCalc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+}
+
+.inputsCalc:hover {
+  border: 1px solid hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+
+.inputsCalc input[type="number"] {
+  width: 85%;
+  padding: 0.15em 0;
+}
+
+label {
+  margin-bottom: -0.8em;
+  color: hsl(186, 14%, 43%);
+}
+
+.calcLabel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calcSpan {
+  font-size: 18px;
+}
+
+.tipOption {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  position: relative;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 0.5em;
+}
+
+.tipOption span {
+  z-index: 1;
+}
+
+span {
+  font-size: 1.3em;
+}
+
+input[type="radio"] {
+  all: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0.5em;
+  transition: 0.3s;
+}
+
+input[type="radio"]:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 57%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="radio"]:hover + span {
+  color: hsl(183, 100%, 15%);
+  transition: 0.3s;
+}
+
+#custom {
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  position: relative;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(189, 41%, 97%);
+  outline: 0;
+  border-radius: 0.5em;
+  transition: 0.3s;
+}
+
+#custom:hover {
+  border: 1px solid hsl(172, 67%, 45%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#custom::placeholder {
+  color: hsl(186, 14%, 43%);
+  text-align: center;
+}
+
+input[type="radio"]:checked {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.tipOption input[type="radio"]:checked + span {
+  color: hsl(183, 100%, 15%);
+}
+
+button {
+  width: 18em;
+  position: relative;
+  bottom: 1em;
+  padding: 0.5em;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: hsl(172, 67%, 57%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:disabled {
+  background-color: hsl(183, 70%, 24%);
+}
+
+@media (max-width: 500px) {
+  main {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper {
+    width: 100%;
+    height: 46em;
+    position: initial;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.1em 1em 2em 1em;
+  }
+
+  .calc,
+  .total {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 28em;
+  }
+
+  .total {
+    height: 16em;
+  }
+
+  label {
+    margin-bottom: -8px;
+  }
+  #selectTip {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #selectTip .column {
+    width: 47%;
+    height: 10em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tipOption {
+    width: 158px;
+  }
+
+  #custom {
+    width: 158px;
+  }
+
+  button {
+    width: 16em;
+    padding: 0.7em;
+  }
+
+  .total section {
+    width: 16em;
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .text .price {
+    font-size: 2em;
+  }
+  .text div h2 {
+    font-size: 16px;
+  }
+
+  .text div p {
+    font-size: 13px;
+  }
+
+  .total section .text {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
